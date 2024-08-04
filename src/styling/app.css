@@ -2,4 +2,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgba(15,23,42,255);
+    color: rgba(210,220,237,255);
+    font-family: "Chakra Petch", sans-serif;
+}
+
+h1 {
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: lighter;
 }
