@@ -10,8 +10,16 @@ h1 {
     font-family: "Rubik Wet Paint", system-ui;
     font-weight: lighter;
     font-size: 3rem;
+    margin: 0;
 }
 
 .navbar img {
     border-radius: 50%;
+}
+
+#bio {
+    font-size: 1.5rem;
+    opacity: 50%;
+    margin: 0;
+    padding-left: 55px;
 }
