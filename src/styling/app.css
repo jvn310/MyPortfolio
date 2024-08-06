@@ -12,3 +12,6 @@ h1 {
     font-size: 3rem;
 }
 
+.navbar img {
+    border-radius: 50%;
+}
