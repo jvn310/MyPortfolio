@@ -32,6 +32,6 @@ p, ul li {
     padding-left: 55px;
 }
 
-ul li {
+.square-bullets {
     list-style-type: square;
 }
