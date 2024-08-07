@@ -31,3 +31,7 @@ p, ul li {
     margin: 0;
     padding-left: 55px;
 }
+
+ul li {
+    list-style-type: square;
+}
