@@ -76,3 +76,21 @@ footer {
 .copywrite p {
     margin: 5px 0;
 }
+
+/* Resume Page */
+#heading, 
+.sub-heading {
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+.centered-container {
+    text-align: center;
+}
+
+.centered-container ul {
+    display: inline-block;
+    text-align: center;
+    padding-left: 0;
+    list-style-position: inside;
+    list-style-type: square;
+}
