@@ -93,6 +93,23 @@ ul li {
     cursor: pointer;
 }
 
+button {
+    background-color: #1b2533; 
+    color: #d2dced; 
+    border: 2px solid #60c7f4; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1a2331; 
+    color: #f6f6f6; 
+}
+
 footer {
     background-color: #1b2533; 
     color: #97AABD; 
