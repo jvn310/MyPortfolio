@@ -91,6 +91,10 @@ footer {
     animation-delay: 0.4s;
 }
 
+.footer-links ul li:hover i {
+    color: #90e0ef;
+}
+
 @keyframes wave {
     0%, 100% {
         transform: translateY(0);
