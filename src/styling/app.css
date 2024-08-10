@@ -257,6 +257,10 @@ hr {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.about-project .project-card {
+    height: 200px;
+}
+
 .project-card img {
     border-radius: 10px;
     width: 100%;
@@ -282,6 +286,15 @@ hr {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+/*race gear page*/
+.about-project {
+    text-align: center;
+}
+
+#racegear-logo {
+    height: 150px;
 }
 
 @media (max-width: 768px) {
