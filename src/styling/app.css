@@ -257,10 +257,6 @@ hr {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.about-project .project-card {
-    height: 200px;
-}
-
 .project-card img {
     border-radius: 10px;
     width: 100%;
@@ -295,6 +291,14 @@ hr {
 
 #racegear-logo {
     height: 150px;
+}
+
+.about-project .project-card {
+    height: 200px;
+}
+
+.about-project .project-card img:hover {
+    transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
