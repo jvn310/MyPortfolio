@@ -59,16 +59,18 @@ ul li {
 
 #alert-container {
     position: fixed;
-    top: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    right: 40%;
     padding: 15px;
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
     border-radius: 5px;
+    max-width: 90%;
+    width: 300px;
     z-index: 1000;
     text-align: center;
+    justify-content: center;
 }
 
 #alert-container.success {
@@ -285,5 +287,9 @@ hr {
 @media (max-width: 768px) {
     #bio {
         padding-left: 0;
+    }
+
+    #alert-container {
+        right: 10%;
     }
 }
