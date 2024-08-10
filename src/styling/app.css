@@ -281,3 +281,9 @@ hr {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+@media (max-width: 768px) {
+    #bio {
+        padding-left: 0;
+    }
+}
