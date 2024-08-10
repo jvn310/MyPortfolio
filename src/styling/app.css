@@ -288,6 +288,7 @@ hr {
 .about-project {
     text-align: center;
     padding: 20px;
+    width: 100%;
 }
 
 #racegear-logo {
@@ -296,6 +297,10 @@ hr {
 
 .about-project .project-card {
     height: 200px;
+}
+
+.about-project #racegear-home {
+    width: 50%;
 }
 
 .about-project .project-card img:hover {
@@ -309,5 +314,13 @@ hr {
 
     #alert-container {
         right: 10%;
+    }
+
+    .about-project #racegear-home {
+        width: 80%;
+    } 
+    
+    .about-project .project-card {
+        height: 150px;
     }
 }
