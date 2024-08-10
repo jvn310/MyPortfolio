@@ -340,4 +340,8 @@ hr {
     .about-project .project-card {
         height: 150px;
     }
+
+    #blog {
+        width: 80%;
+    }
 }
