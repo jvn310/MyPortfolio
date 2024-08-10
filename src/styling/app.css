@@ -291,8 +291,21 @@ hr {
     width: 100%;
 }
 
-#racegear-logo {
+#racegear-logo,
+#stories-logo {
     height: 150px;
+}
+
+.bg {
+    background-color: #f6f6f6;
+    width: 10%;
+    justify-content: center;
+    margin: auto;
+    border-radius: 50%;
+}
+
+#blog {
+    width: 45%;
 }
 
 .about-project .project-card {
