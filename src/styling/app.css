@@ -312,6 +312,10 @@ hr {
     height: 200px;
 }
 
+.about-project h1 {
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
 .about-project #racegear-home {
     width: 50%;
 }
