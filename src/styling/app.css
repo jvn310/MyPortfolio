@@ -307,6 +307,10 @@ hr {
     transform: scale(1.2);
 }
 
+.about-project a {
+    color: #60c7f4;
+}
+
 @media (max-width: 768px) {
     #bio {
         padding-left: 0;
