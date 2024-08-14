@@ -46,6 +46,11 @@ ul li {
     border-radius: 50%;
 }
 
+.offcanvas-body,
+.offcanvas-header {
+    background-color: #1b2533;
+}
+
 #bio {
     font-size: 1.5rem;
     opacity: 50%;
