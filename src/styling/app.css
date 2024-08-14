@@ -291,9 +291,13 @@ hr {
     width: 100%;
 }
 
-#racegear-logo,
 #stories-logo {
     height: 150px;
+}
+
+#racegear-logo {
+    width: 120px;
+    height: 120px;
 }
 
 #girlcode-logo {
