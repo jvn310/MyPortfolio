@@ -328,6 +328,28 @@ hr {
     color: #60c7f4;
 }
 
+
+.projectVideo {
+    background-color: #1b2533;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 80%; /* Adjust the width based on your layout */
+    text-align: center;
+}
+
+.projectVideo video {
+    width: 100%; /* Make the video responsive */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.projectVideo video:hover {
+    transform: scale(1.05); /* Subtle zoom on hover */
+    transition: transform 0.3s ease;
+}
+
 @media (max-width: 768px) {
     #bio {
         padding-left: 0;
