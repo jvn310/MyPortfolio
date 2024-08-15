@@ -23,6 +23,7 @@ ul li {
     font-size: 1.3rem;
 }
 
+/* Waving hand emoji animation */
 .wave {
     font-size: 1.5rem;
     display: inline-block;
@@ -40,7 +41,7 @@ ul li {
     60% { transform: rotate(0deg); }
     100% { transform: rotate(0deg); }
 }
-
+/* Waving hand emoji animation end*/
 
 .navbar img {
     border-radius: 50%;
@@ -62,6 +63,7 @@ ul li {
     list-style-type: square;
 }
 
+/* ui alerts*/
 #alert-container {
     position: fixed;
     top: 30%;
@@ -95,8 +97,9 @@ ul li {
     color: #856404;
     border: 1px solid #ffeeba;
 }
+/* ui alerts end*/
 
-
+/*weather container*/
 .modal {
     display: none; 
     position: fixed; 
@@ -132,6 +135,7 @@ ul li {
     text-decoration: none;
     cursor: pointer;
 }
+/*weather container*/
 
 button {
     background-color: #1b2533; 
@@ -289,7 +293,7 @@ hr {
     flex-wrap: wrap;
 }
 
-/*race gear page*/
+/*project pages*/
 .about-project {
     text-align: center;
     padding: 20px;
