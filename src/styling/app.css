@@ -372,6 +372,15 @@ hr {
     transition: transform 0.3s ease;
 }
 
+/*Contact Page */
+.centered-content {
+    text-align: center;
+}
+  
+  .centered-content p {
+    font-size: 2rem;
+}
+  
 @media (max-width: 768px) {
     #bio {
         padding-left: 0;
