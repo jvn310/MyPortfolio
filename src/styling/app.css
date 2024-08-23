@@ -434,6 +434,10 @@ hr {
         right: 10%;
     }
 
+    .bg {
+        width: 45%;
+    }
+
     .about-project #racegear-home {
         width: 80%;
     } 
