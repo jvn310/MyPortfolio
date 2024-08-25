@@ -395,7 +395,6 @@ h4 {
     font-size: 2rem;
 }
 
-.centered-content button,
 .content-centered button {
   padding: 0.1em 0.25em;
   width: 16em;
@@ -407,14 +406,12 @@ h4 {
   cursor: pointer;
 }
 
-.centered-content button a,
 .content-centered button a {
     text-decoration: none;
     font-size: 1rem;
     color: #fff;
 }
 
-.centered-content button span,
 .content-centered button span {
     position: relative;
     display: flex;
@@ -431,17 +428,73 @@ h4 {
     box-shadow: 0 0.4em 0.1em 0.019em #60c7f4;
 }
 
-.centered-content button span:hover,
 .content-centered button span:hover {
     transition: all 0.5s;
     transform: translate(0, 0.4em);
     box-shadow: 0 0 0 0 #fff;
 }
 
-.centered-content button span:not(hover),
 .content-centered button span:not(hover) {
     transition: all 1s;
 }
+
+/* Contact Form Container */
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.contact-form h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+.contact-form .form-label {
+    font-weight: 500;
+    color: #555;
+}
+
+.contact-form .custom-input,
+.contact-form .custom-textarea {
+    background-color: #fff; 
+    border: 2px solid #ddd; 
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333; 
+    transition: border-color 0.3s ease;
+}
+
+.contact-form .custom-input:focus,
+.contact-form .custom-textarea:focus {
+    border-color: #00aaff;
+    outline: none;
+}
+
+.contact-form .custom-button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #00aaff; 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .custom-button:hover {
+    background-color: #0088cc;
+}
+
   
 @media (max-width: 768px) {
     #bio {
