@@ -257,6 +257,14 @@ hr {
 }
 
 /* Projects page */
+h4 {
+    padding-bottom: 10px;
+}
+
+.content-centered {
+    text-align: center;
+}
+
 .project-card {
     background-color: #1b2533;
     border-radius: 10px;
@@ -264,6 +272,10 @@ hr {
     padding: 15px;
     margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container .my-5 {
+    margin-top: 20px;
 }
 
 .project-card img {
@@ -378,11 +390,13 @@ hr {
     padding-bottom: 20px;
 }
   
-  .centered-content p {
+  .centered-content p,
+  .content-centered p {
     font-size: 2rem;
 }
 
-.centered-content button {
+.centered-content button,
+.content-centered button {
   padding: 0.1em 0.25em;
   width: 16em;
   height: 4.2em;
@@ -393,13 +407,15 @@ hr {
   cursor: pointer;
 }
 
-.centered-content button a {
+.centered-content button a,
+.content-centered button a {
     text-decoration: none;
     font-size: 1rem;
     color: #fff;
 }
 
-.centered-content button span {
+.centered-content button span,
+.content-centered button span {
     position: relative;
     display: flex;
     justify-content: center;
@@ -415,13 +431,15 @@ hr {
     box-shadow: 0 0.4em 0.1em 0.019em #60c7f4;
 }
 
-.centered-content button span:hover {
+.centered-content button span:hover,
+.content-centered button span:hover {
     transition: all 0.5s;
     transform: translate(0, 0.4em);
     box-shadow: 0 0 0 0 #fff;
 }
 
-.centered-content button span:not(hover) {
+.centered-content button span:not(hover),
+.content-centered button span:not(hover) {
     transition: all 1s;
 }
   
