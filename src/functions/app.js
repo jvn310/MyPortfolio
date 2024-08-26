@@ -50,7 +50,7 @@ function showWeather(position) {
     fetchWeatherAndLocation(lat, lon);
 }
 
-const VERCEL_URL = "https://my-portfolio-gvxtmk4bi-tumelos-projects-bb58b6fc.vercel.app/";
+const VERCEL_URL = "https://my-portfolio-omega-virid-53.vercel.app/";
 
 function fetchWeatherAndLocation(lat, lon) {
     fetch(`${VERCEL_URL}/location?lat=${lat}&lon=${lon}`)
