@@ -51,7 +51,7 @@ function showWeather(position) {
 }
 
 function fetchWeatherAndLocation(lat, lon) {
-    fetch(`http://localhost:3000/location?lat=${lat}&lon=${lon}`)
+    fetch(`/location?lat=${lat}&lon=${lon}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -61,7 +61,7 @@ function fetchWeatherAndLocation(lat, lon) {
         .then(locationData => {
             const { streetName, town } = locationData;
 
-            fetch(`http://localhost:3000/weather?lat=${lat}&lon=${lon}`)
+            fetch(`/weather?lat=${lat}&lon=${lon}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
