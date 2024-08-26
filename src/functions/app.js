@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function requestLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.watchPosition(showWeather, handleError, {
+        navigator.geolocation.getCurrentPosition(showWeather, handleError, {
             enableHighAccuracy: true,
             timeout: 30000, 
             maximumAge: 0    
@@ -51,23 +51,25 @@ function showWeather(position) {
 }
 
 function fetchWeatherAndLocation(lat, lon) {
-    const geocodingApiKey = process.env.API_KEY_1;
-    const geocodingUrl = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lon}&key=${geocodingApiKey}`;
+    fetch(`http://localhost:3000/location?lat=${lat}&lon=${lon}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(locationData => {
+            const { streetName, town } = locationData;
 
-    fetch(geocodingUrl)
-        .then(response => response.json())
-        .then(geocodingData => {
-            const results = geocodingData.results[0];
-            const streetName = results.components.road || "Unknown Street";
-            const town = results.components.town || results.components.city || "Unknown Town";
-
-            const weatherApiKey = process.env.API_KEY_2;
-            const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherApiKey}&units=metric`;
-
-            fetch(weatherUrl)
-                .then(response => response.json())
-                .then(data => {
-                    showWeatherData(data, streetName, town);
+            fetch(`http://localhost:3000/weather?lat=${lat}&lon=${lon}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(weatherData => {
+                    showWeatherData(weatherData, streetName, town);
                 })
                 .catch(error => {
                     showAlert("Error fetching the weather data.", "danger");
@@ -79,6 +81,7 @@ function fetchWeatherAndLocation(lat, lon) {
             console.error("Error fetching the location data: ", error);
         });
 }
+
 
 function showWeatherData(data, streetName, town) {
     const weatherDescription = data.weather[0].description;
@@ -125,7 +128,7 @@ function handleError(error) {
     showAlert(errorMsg[error.code] || "An unknown error occurred.", "danger");
 }
 
-
+// Close the modal when the user clicks the close button
 document.querySelector(".close").onclick = function() {
     document.getElementById("weather-modal").style.display = "none";
 }
