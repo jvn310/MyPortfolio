@@ -50,28 +50,24 @@ function showWeather(position) {
     fetchWeatherAndLocation(lat, lon);
 }
 
-const VERCEL_URL = "https://my-portfolio-omega-virid-53.vercel.app/";
-
 function fetchWeatherAndLocation(lat, lon) {
-    fetch(`${VERCEL_URL}/location?lat=${lat}&lon=${lon}`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(locationData => {
-            const { streetName, town } = locationData;
+    const geocodingApiKey = "422e3c90ea7540f08c742bf478a7ee61";
+    const geocodingUrl = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lon}&key=${geocodingApiKey}`;
 
-            fetch(`${VERCEL_URL}/weather?lat=${lat}&lon=${lon}`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(weatherData => {
-                    showWeatherData(weatherData, streetName, town);
+    fetch(geocodingUrl)
+        .then(response => response.json())
+        .then(geocodingData => {
+            const results = geocodingData.results[0];
+            const streetName = results.components.road || "Unknown Street";
+            const town = results.components.town || results.components.city || "Unknown Town";
+
+            const weatherApiKey = "33de4fe03ae9604e4f03b1ba6b20de58";
+            const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherApiKey}&units=metric`;
+
+            fetch(weatherUrl)
+                .then(response => response.json())
+                .then(data => {
+                    showWeatherData(data, streetName, town);
                 })
                 .catch(error => {
                     showAlert("Error fetching the weather data.", "danger");
@@ -83,7 +79,6 @@ function fetchWeatherAndLocation(lat, lon) {
             console.error("Error fetching the location data: ", error);
         });
 }
-
 
 function showWeatherData(data, streetName, town) {
     const weatherDescription = data.weather[0].description;

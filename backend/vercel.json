@@ -1,7 +1,0 @@
-{
-    "rewrites": [
-      { "source": "/weather", "destination": "/api/weather" },
-      { "source": "/location", "destination": "/api/location" }
-    ]
-  }
-  
