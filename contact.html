@@ -65,24 +65,25 @@
           </div>
 
           <!--Contact me form-->
-  <div class="contact-form">
-    <h2>Get in Touch</h2>
-    <form action="mailto:tumelophatlane0410@gmail.com" method="post" enctype="text/plain">
-        <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control custom-input" id="name" placeholder="Your Name">
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control custom-input" id="email" placeholder="name@example.com">
-        </div>
-        <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control custom-textarea" id="message" rows="3" placeholder="Your Message"></textarea>
-        </div>
-        <button type="submit" class="btn custom-button">Send</button>
-    </form>
-</div>
+          <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="https://api.web3forms.com/submit" method="post" enctype="application/x-www-form-urlencoded">
+              <div class="mb-3">
+                <input type="hidden" name="access_key" value="eaf660a3-f580-4b45-acab-33246585d53f">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control custom-input" id="name" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control custom-input" id="email" name="email" placeholder="name@example.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control custom-textarea" id="message" name="message" rows="3" placeholder="Your Message" required></textarea>
+              </div>
+              <button type="submit" class="btn custom-button">Send</button>
+            </form>
+          </div>
           <!--Contact me form end-->
 
     
