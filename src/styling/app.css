@@ -406,6 +406,38 @@ h4 {
   cursor: pointer;
 }
 
+a.glow-link {
+    color: #60c7f4;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+a.glow-link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #60c7f4, transparent);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+a.glow-link:hover {
+    color: #90e0ef;
+    text-shadow: 0 0 5px #60c7f4, 0 0 10px #60c7f4, 0 0 15px #60c7f4;
+}
+
+a.glow-link:hover::before {
+    width: 120%;
+    opacity: 1;
+}
+
 .content-centered button a {
     text-decoration: none;
     font-size: 1rem;
