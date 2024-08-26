@@ -50,6 +50,8 @@ function showWeather(position) {
     fetchWeatherAndLocation(lat, lon);
 }
 
+const VERCEL_URL = process.env.VERCEL_URL;
+
 function fetchWeatherAndLocation(lat, lon) {
     fetch(`${VERCEL_URL}/location?lat=${lat}&lon=${lon}`)
         .then(response => {
