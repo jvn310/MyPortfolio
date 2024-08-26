@@ -294,9 +294,38 @@ h4 {
     color: #d2dced;
 }
 
-.project-link {
-    text-decoration: underline;
+.project-link, .back-link {
+    display: inline-block;
     color: #60c7f4;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.project-link::after, .back-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #60c7f4;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover, .back-link:hover {
+    color: #90e0ef;
+}
+
+.project-link:hover::after, .back-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Glowing effect on hover */
+.project-link:hover, .back-link:hover {
+    text-shadow: 0 0 8px #60c7f4, 0 0 16px #60c7f4, 0 0 24px #90e0ef, 0 0 32px #90e0ef;
 }
 
 .row {
