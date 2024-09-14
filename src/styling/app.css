@@ -590,3 +590,9 @@ a.glow-link:hover::before {
         padding: 0;
     }
 }
+
+@media (min-width: 850px) and (max-width: 1024px) {
+    footer {
+        position: fixed;
+    }
+}
