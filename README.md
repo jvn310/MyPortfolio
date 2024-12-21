@@ -22,11 +22,11 @@ This is a personal portfolio project showcasing my skills, projects, and experie
 ## How to Use
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/portfolio-project.git
+    git clone https://github.com/yourusername/MyPortfolio.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd portfolio-project
+    cd MyPortfolio
     ```
 3. Open the `index.html` file in your browser to view the portfolio.
 4. Use the navigation menu to explore the Home, About, Projects, Resume, and Contact pages.
